@@ -1,5 +1,5 @@
 <?php
-$target_file = "../data/" . basename($_FILES["fileToUpload"]["name"]);
+$target_file = "../data/data.csv";
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if($fileType === "csv") {

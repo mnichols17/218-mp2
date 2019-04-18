@@ -12,11 +12,9 @@ class File
 
         if (($handle = fopen($filename, "r")) !== FALSE) {
             while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
-
                 if($count == 0) {
                     $titles = $row;
-                } else {
-                    //$record[] = ('$row, $titles');
+                } else if (sizeof($row) > 1){
                     array_push($records, new Record($row, $titles));
                 }
                 $count++;
