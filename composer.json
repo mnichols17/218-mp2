@@ -1,0 +1,13 @@
+{
+    "name": "michaelnichols/218-mp2",
+    "description": "IS 218 - MP2",
+    "require": {
+        "phpunit/phpunit": "^8.1"
+    },
+    "authors": [
+        {
+            "name": "Mike",
+            "email": "mike.nichols97@gmail.com"
+        }
+    ]
+}
