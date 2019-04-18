@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>IS 218 | Mini Project 1</title>
+        <title>IS 218 | Mini Project 2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -36,13 +36,21 @@
         </nav>
 
         <main role="main" class="container">
-            <div>
+            <div class="row">
                 <table class="table table-striped table-bordered">
                     <?php
                         $data = ($file::readCSVtoArray("../data/data.csv"));
                         echo(CreateTable::create_HTML_Table($data[0], $data[1]));
                     ?>
                 </table>
+            </div>
+            <div class="row">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select file to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <br>
+                    <input type="submit" value="Upload File" name="submit">
+                </form>
             </div>
         </main>
 
