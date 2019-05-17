@@ -6,7 +6,7 @@
     $file = new File();
     $title = "Table";
     include("header.php");
-    date_default_timezone_set('EST');
+    date_default_timezone_set('America/New_York');
     $date = date('l jS \of F Y h:i:s A');
 ?>
         <div class="row">

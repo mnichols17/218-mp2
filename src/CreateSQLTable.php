@@ -52,12 +52,11 @@ class CreateSQLTable
 
     public function createTaskTable($titles, $data) {
 
-        $sql = <<<EOSQL
-        
-            CREATE TABLE IF NOT EXISTS tasks (
-                task_id     INT AUTO_INCREMENT PRIMARY KEY,
-              );
-EOSQL;
-        return $this->pdo->exec($sql);
+        // Use this statement
+        $stmt = $this->pdo->prepare('SELECT * FROM MyGuests');
+        $stmt->execute();
+        $contacts = $stmt->fetchObject();
+        print_r($contacts);
+
     }
 }
